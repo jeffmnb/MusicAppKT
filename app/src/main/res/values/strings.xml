@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MusicAppKT</string>
+    <string name="title_activity_index">index</string>
+    <string name="title_activity_menu_bar">MenuBar</string>
+    <string name="title_activity_artist_section">ArtistSection</string>
+    <string name="title_activity_song_menu">SongMenu</string>
+</resources>
