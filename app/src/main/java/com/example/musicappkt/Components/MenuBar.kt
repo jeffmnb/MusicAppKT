@@ -40,7 +40,7 @@ fun MenuBar() {
             Icon(
                 imageVector = Icons.Default.Menu,
                 contentDescription = "Playlist_Icon_Menu",
-                tint = Color.White
+                tint = Color.White,
             )
         }
     }

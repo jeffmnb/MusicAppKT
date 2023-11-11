@@ -21,6 +21,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.musicappkt.Components.ui.theme.MusicAppKTTheme
 
@@ -38,20 +39,26 @@ fun SongMenu(
             horizontalArrangement = Arrangement.SpaceEvenly, modifier = Modifier.fillMaxWidth()
         ) {
             IconButton(onClick = onBackClick) {
-                Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "arrowBackIcon")
+                Icon(
+                    imageVector = Icons.Default.ArrowBack,
+                    contentDescription = "arrowBackIcon",
+                    tint = Color.White
+                )
             }
 
             IconButton(onClick = { onPLayPauseClick() }) {
                 Icon(
                     imageVector = if (isPlaying) Icons.Default.PlayArrow else Icons.Default.Close,
-                    contentDescription = "playPauseIcon"
+                    contentDescription = "playPauseIcon",
+                    tint = Color.White
                 )
             }
 
             IconButton(onClick = onForwardClick) {
                 Icon(
                     imageVector = Icons.Default.ArrowForward,
-                    contentDescription = "arrowForwardIcon"
+                    contentDescription = "arrowForwardIcon",
+                    tint = Color.White
                 )
             }
         }
