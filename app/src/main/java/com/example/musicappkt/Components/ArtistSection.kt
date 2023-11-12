@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.SubcomposeAsyncImage
@@ -24,7 +25,7 @@ import com.example.musicappkt.ArtistSong
 
 
 @Composable
-fun ArtistSection(artistSong: ArtistSong) {
+fun ArtistSection(artistSong: ArtistSong, imageScale: Dp) {
     Column(
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -36,7 +37,7 @@ fun ArtistSection(artistSong: ArtistSong) {
                 CircularProgressIndicator(modifier = Modifier.size(40.dp))
             },
             modifier = Modifier
-                .size(220.dp)
+                .size(imageScale)
                 .align(Alignment.CenterHorizontally)
                 .clip(CircleShape)
         )

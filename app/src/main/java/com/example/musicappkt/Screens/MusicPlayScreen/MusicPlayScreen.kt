@@ -2,6 +2,7 @@ package com.example.musicappkt.Screens.MusicPlayScreen
 
 import android.annotation.SuppressLint
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
@@ -13,6 +14,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -23,6 +25,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.musicappkt.Components.ArtistSection
+import com.example.musicappkt.Components.LyricsSection
 import com.example.musicappkt.Components.MenuBar
 import com.example.musicappkt.Components.SongMenu
 import com.example.musicappkt.Services.artistSongList
@@ -38,6 +41,10 @@ fun MusicPlayScreen() {
     var isForwarding by remember {
         mutableStateOf<Boolean>(false)
     }
+
+    var scrollState = rememberScrollState()
+
+    val imageScale by animateDpAsState(targetValue = if (scrollState.value > 0) 160.dp else 240.dp)
 
     var selectedIndex by remember { mutableStateOf<Int>(0) }
 
@@ -77,7 +84,6 @@ fun MusicPlayScreen() {
 
         Spacer(Modifier.height(16.dp))
 
-
         AnimatedContent(targetState = selectedIndex, transitionSpec = {
             slideInHorizontally(
                 initialOffsetX = { if (isForwarding) 1000 else -1000 }, animationSpec = tween(500)
@@ -86,10 +92,8 @@ fun MusicPlayScreen() {
                 animationSpec = tween(durationMillis = 500)
             )
         }, label = "") {
-            ArtistSection(artistSong = artistSongList[selectedIndex])
+            ArtistSection(artistSong = artistSongList[selectedIndex], imageScale = imageScale)
         }
-
-
 
         Spacer(Modifier.height(32.dp))
 
@@ -97,6 +101,8 @@ fun MusicPlayScreen() {
             onBackClick = { handleBackSongMenu() },
             onPLayPauseClick = { handlePlaySongMenu() },
             onForwardClick = { handleForwardSongMenu() })
+
+        LyricsSection(artistSongList[selectedIndex].songLyrics, scrollState)
     }
 
 }

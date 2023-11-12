@@ -15,6 +15,11 @@
         android:theme="@style/Theme.MusicAppKT"
         tools:targetApi="31">
         <activity
+            android:name=".Components.LyricsSection"
+            android:exported="false"
+            android:label="@string/title_activity_lyrics_section"
+            android:theme="@style/Theme.MusicAppKT" />
+        <activity
             android:name=".Components.SongMenu"
             android:exported="false"
             android:label="@string/title_activity_song_menu"
