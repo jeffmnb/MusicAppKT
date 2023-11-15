@@ -5,4 +5,6 @@
     <string name="title_activity_artist_section">ArtistSection</string>
     <string name="title_activity_song_menu">SongMenu</string>
     <string name="title_activity_lyrics_section">LyricsSection</string>
+    <string name="title_activity_play_list_screen">PlayListScreen</string>
+    <string name="title_activity_navigate_service">NavigateService</string>
 </resources>

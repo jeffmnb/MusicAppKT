@@ -15,6 +15,16 @@
         android:theme="@style/Theme.MusicAppKT"
         tools:targetApi="31">
         <activity
+            android:name="Navigation.NavigateService"
+            android:exported="false"
+            android:label="@string/title_activity_navigate_service"
+            android:theme="@style/Theme.MusicAppKT" />
+        <activity
+            android:name=".Screens.Screens.PlayListScreen"
+            android:exported="false"
+            android:label="@string/title_activity_play_list_screen"
+            android:theme="@style/Theme.MusicAppKT" />
+        <activity
             android:name=".Components.LyricsSection"
             android:exported="false"
             android:label="@string/title_activity_lyrics_section"

@@ -1,4 +1,4 @@
-package com.example.musicappkt.Screens.MusicPlayScreen
+package com.musicappkt.Screens.MusicPlayScreen
 
 import android.annotation.SuppressLint
 import androidx.compose.animation.AnimatedContent
@@ -7,7 +7,6 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
-import androidx.compose.animation.with
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -24,15 +23,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.musicappkt.Components.ArtistSection
-import com.example.musicappkt.Components.LyricsSection
-import com.example.musicappkt.Components.MenuBar
-import com.example.musicappkt.Components.SongMenu
+import androidx.navigation.NavController
+
 import com.example.musicappkt.Services.artistSongList
+import com.musicappkt.Screens.MusicPlayScreen.Components.ArtistSection
+import com.musicappkt.Screens.MusicPlayScreen.Components.LyricsSection
+import com.musicappkt.Screens.MusicPlayScreen.Components.MenuBar
+import com.musicappkt.Screens.MusicPlayScreen.Components.SongMenu
 
 @SuppressLint("UnusedContentLambdaTargetStateParameter")
 @Composable
-fun MusicPlayScreen() {
+fun MusicPlayScreen(navigation: NavController) {
 
     var isPlaying by remember {
         mutableStateOf<Boolean>(false)
@@ -80,7 +81,7 @@ fun MusicPlayScreen() {
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        MenuBar()
+        MenuBar(onClickListMenu = { navigation.navigate("com/example/musicappkt/Screens/Screens/PlayListScreen") })
 
         Spacer(Modifier.height(16.dp))
 

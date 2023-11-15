@@ -1,4 +1,4 @@
-package com.example.musicappkt.Components
+package com.musicappkt.Screens.MusicPlayScreen.Components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column

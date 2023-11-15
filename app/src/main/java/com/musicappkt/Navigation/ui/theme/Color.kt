@@ -1,4 +1,4 @@
-package com.example.musicappkt.Components.ui.theme
+package com.example.musicappkt.Navigation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
