@@ -9,6 +9,6 @@ data class ArtistSong (
 
 data class PlayListItem(
     val name:String,
-    val ratingL: Number,
+    val rating: Number,
     val listenersCount: Number
 )

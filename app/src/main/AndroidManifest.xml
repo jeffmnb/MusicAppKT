@@ -15,6 +15,16 @@
         android:theme="@style/Theme.MusicAppKT"
         tools:targetApi="31">
         <activity
+            android:name="com.musicappkt.Screens.PlayListScreen.Components.PlayListItem"
+            android:exported="false"
+            android:label="@string/title_activity_play_list_item"
+            android:theme="@style/Theme.MusicAppKT" />
+        <activity
+            android:name="com.musicappkt.Screens.PlayListScreen.Components.HeaderPlayList"
+            android:exported="false"
+            android:label="@string/title_activity_header_play_list"
+            android:theme="@style/Theme.MusicAppKT" />
+        <activity
             android:name="Navigation.NavigateService"
             android:exported="false"
             android:label="@string/title_activity_navigate_service"

@@ -7,4 +7,6 @@
     <string name="title_activity_lyrics_section">LyricsSection</string>
     <string name="title_activity_play_list_screen">PlayListScreen</string>
     <string name="title_activity_navigate_service">NavigateService</string>
+    <string name="title_activity_header_play_list">HeaderPlayList</string>
+    <string name="title_activity_play_list_item">PlayListItem</string>
 </resources>
