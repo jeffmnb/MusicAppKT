@@ -13,13 +13,13 @@ fun NavigateService(){
 
     val navControler = rememberNavController()
 
-    NavHost(navController = navControler, startDestination = "com/example/musicappkt/Screens/Screens/PlayListScreen"){
+    NavHost(navController = navControler, startDestination = "MusicPlayScreen"){
 
-        composable("com/example/musicappkt/Screens/Screens/MusicPlayScreen") {
+        composable("MusicPlayScreen") {
             MusicPlayScreen(navControler)
         }
 
-        composable("com/example/musicappkt/Screens/Screens/PlayListScreen"){
+        composable("PlayListScreen"){
             PlayListScreen(navControler)
         }
     }

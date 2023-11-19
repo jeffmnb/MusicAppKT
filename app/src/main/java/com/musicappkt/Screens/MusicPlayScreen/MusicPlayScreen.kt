@@ -81,7 +81,7 @@ fun MusicPlayScreen(navigation: NavController) {
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        MenuBar(onClickListMenu = { navigation.navigate("com/example/musicappkt/Screens/Screens/PlayListScreen") })
+        MenuBar(onClickListMenu = { navigation.navigate("PlayListScreen") })
 
         Spacer(Modifier.height(16.dp))
 

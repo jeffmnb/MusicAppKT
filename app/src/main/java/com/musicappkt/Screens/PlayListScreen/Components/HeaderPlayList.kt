@@ -18,14 +18,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun HeaderPlayList(){
+fun HeaderPlayList(onClickBack: () -> Unit){
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
         IconButton(
-            onClick = { /*TODO*/ },
+            onClick = { onClickBack()},
             modifier = Modifier.size(26.dp),
         ) {
             Icon(
